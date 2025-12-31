@@ -1,3 +1,20 @@
+---
+title: PyTorch Playground
+emoji: 🔥
+colorFrom: orange
+colorTo: red
+sdk: gradio
+sdk_version: 4.44.1
+app_file: app.py
+pinned: false
+license: mit
+tags:
+  - pytorch
+  - education
+  - machine-learning
+  - deep-learning
+---
+
 # PyTorch Playground
 
 An interactive web application for learning PyTorch concepts, organized by skill level.
