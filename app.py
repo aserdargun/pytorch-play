@@ -1,23 +1,24 @@
 """
 Hugging Face Spaces entry point for PyTorch Playground.
+Minimal test version to debug deployment issues.
 """
 
 import gradio as gr
-import sys
-from pathlib import Path
 
-# Add src to path for imports
-sys.path.insert(0, str(Path(__file__).parent / "src"))
+# Create a minimal test app first
+with gr.Blocks(title="PyTorch Playground") as demo:
+    gr.Markdown("# PyTorch Playground")
+    gr.Markdown("Testing deployment...")
 
-try:
-    from pytorch_playground.app import create_app
-    demo = create_app()
-except Exception as e:
-    # Fallback to simple app if main app fails
-    with gr.Blocks() as demo:
-        gr.Markdown(f"# PyTorch Playground")
-        gr.Markdown(f"Error loading main app: {e}")
-        gr.Markdown("Please check the logs for details.")
+    with gr.Row():
+        text_input = gr.Textbox(label="Input", placeholder="Type something...")
+        text_output = gr.Textbox(label="Output")
+
+    btn = gr.Button("Test")
+    btn.click(fn=lambda x: f"You typed: {x}", inputs=text_input, outputs=text_output)
+
+    gr.Markdown("---")
+    gr.Markdown("If you see this, the Space is working! Full app coming soon.")
 
 if __name__ == "__main__":
     demo.launch()
