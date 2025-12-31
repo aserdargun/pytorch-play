@@ -1,4 +1,6 @@
 # Requirements for Hugging Face Spaces
+# Explicit versions to avoid conflicts
 
-gradio>=5.0.0
+gradio==5.6.0
+huggingface_hub>=0.25.0
 numpy>=1.21.0
