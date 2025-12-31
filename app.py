@@ -10,8 +10,8 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 
 from pytorch_playground.app import create_app
 
-# Create and launch app
-app = create_app()
+# Create app
+demo = create_app()
 
-if __name__ == "__main__":
-    app.launch()
+# Launch (HF Spaces handles this automatically, but explicit launch helps locally)
+demo.launch()
