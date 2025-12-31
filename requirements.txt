@@ -1,4 +1,4 @@
 # Requirements for Hugging Face Spaces
-# Minimal for testing
 
+huggingface_hub<0.24
 numpy>=1.21.0
