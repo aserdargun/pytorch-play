@@ -563,7 +563,7 @@ class TrainEvalDemo:
                     if params.get("show_scheduler"):
                         scheduler = gr.Dropdown(params.get("schedulers", ["None"]), value="None", label="LR Scheduler")
                     else:
-                        scheduler = gr.Dropdown(value="None", visible=False)
+                        scheduler = gr.Dropdown(choices=["None"], value="None", visible=False)
 
                     if params.get("show_weight_decay"):
                         weight_decay = gr.Number(value=0.0, label="Weight Decay")

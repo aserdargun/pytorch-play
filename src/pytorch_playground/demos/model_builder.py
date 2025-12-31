@@ -461,7 +461,7 @@ class ModelBuilderDemo:
                             label="Weight Initialization",
                         )
                     else:
-                        init_method = gr.Dropdown(value="default", visible=False)
+                        init_method = gr.Dropdown(choices=["default"], value="default", visible=False)
 
                     device_dropdown = gr.Dropdown(
                         choices=["auto", "cpu", "cuda", "mps"],
