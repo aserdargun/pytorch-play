@@ -1,8 +1,8 @@
 ---
 title: PyTorch Playground
 emoji: 🔥
-colorFrom: orange
-colorTo: red
+colorFrom: red
+colorTo: yellow
 sdk: gradio
 sdk_version: 4.44.1
 app_file: app.py
